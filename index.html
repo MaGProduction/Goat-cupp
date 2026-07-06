@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GOAT CUP Live Leaderboards</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(180deg,#0b1d3a,#02060f);color:#fff;text-align:center}
+.hero{padding:40px;background:radial-gradient(circle,#1e4fbf,#08111f)}
+h1{font-size:54px;color:#ffd700;text-shadow:0 0 20px gold}.ball{font-size:80px;animation:s 6s linear infinite}
+.card{max-width:850px;margin:25px auto;padding:24px;background:#ffffff12;border-radius:18px;backdrop-filter:blur(8px)}
+table{width:100%;border-collapse:collapse}th,td{padding:14px;border-bottom:1px solid #ffffff33}th{background:#ffd700;color:#000}
+.badge{display:inline-block;background:#c1121f;padding:10px 18px;border-radius:999px;font-weight:bold;animation:b 1.2s infinite}
+.power{margin:18px;color:#8fd3ff;font-weight:bold}
+footer{color:#aaa;padding:20px}
+@keyframes s{to{transform:rotate(360deg)}}@keyframes b{50%{opacity:.45}}
+</style></head><body>
+<div class="hero"><h1>🏆 GOAT CUP</h1><div class="ball">⚽</div><h2>LIVE LEADERBOARDS</h2></div>
+<div class="card"><h3 id="countdown" style="color:#ffd700"></h3>
+<table>
+<tr><th>Name</th><th>Rank</th></tr>
+<tr><td>NotAGod</td><td>Founder</td></tr>
+<tr><td>Kenichiichiro</td><td>Admin</td></tr>
+<tr><td>Lewi</td><td>9999</td></tr>
+</table>
+<p class="power">Powered by FIFA Official</p>
+<div class="badge">🚧 This Website under development by Melvin 🚧</div>
+</div>
+<footer id=f></footer>
+<script>setInterval(()=>f.textContent="© 2026 GOAT CUP • "+new Date().toLocaleTimeString(),1000);function upd(){const t=new Date("2026-07-07T15:00:00"),n=new Date(),d=t-n,e=document.getElementById("countdown");if(d<=0){e.textContent="🏆 GOAT CUP HAS STARTED!";return;}let h=Math.floor(d/3600000),m=Math.floor((d%3600000)/60000),s=Math.floor((d%60000)/1000);e.textContent=`⏳ Countdown: ${h}h ${m}m ${s}s`;}setInterval(upd,1000);upd();</script>
+</body></html>
