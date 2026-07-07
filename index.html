@@ -17,7 +17,7 @@ h1{font-size:58px;color:#ffd700;text-shadow:0 0 20px gold,0 0 50px orange}
 .ball{font-size:70px;animation:spin 8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes float{50%{transform:translateY(-12px)}}
-.card{position:relative;max-width:900px;margin:20px auto;padding:40px;border-radius:25px;background:#ffffff12;backdrop-filter:blur(12px);border:1px solid #ffffff22;box-shadow:0 0 40px #1aa7ff66}
+.card,.bracket{position:relative;max-width:900px;margin:20px auto;padding:40px;border-radius:25px;background:#ffffff12;backdrop-filter:blur(12px);border:1px solid #ffffff22;box-shadow:0 0 40px #1aa7ff66}
 .concluded{font-size:34px;color:#ffd700;text-shadow:0 0 15px gold;animation:pulse 2s infinite}
 @keyframes pulse{50%{transform:scale(1.03)}}
 .subtitle{margin-top:28px;font-size:36px;font-weight:bold}
@@ -29,36 +29,32 @@ h1{font-size:58px;color:#ffd700;text-shadow:0 0 20px gold,0 0 50px orange}
 @keyframes blink{50%{opacity:.45}}
 .confetti{position:fixed;top:-20px;width:8px;height:16px;animation:fall linear forwards}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
-.spacer{height:500px}
-footer{position:relative;margin:20px 0;color:#aaa}
-</style>
-</head>
-<body>
-<div class="hero">
-<div class="trophy">🏆</div>
-<h1>GOAT CUP EFOOTBALL</h1>
-<div class="ball">⚽</div>
+table{width:100%;border-collapse:collapse;margin-top:20px}th,td{border:1px solid #fff3;padding:10px}th{background:#ffffff22}
+.spacer{height:120px}footer{margin:20px;color:#aaa}
+</style></head><body>
+<div class="hero"><div class="trophy">🏆</div><h1>GOAT CUP EFOOTBALL</h1><div class="ball">⚽</div></div>
+<div class="card"><div class="concluded">🏆 GOAT CUP IS CONCLUDED 🏆</div><div class="subtitle">The Winner of GOAT CUP</div><div class="winner">LEWI</div><div class="status">Winner still under check by FIFA Official</div><div class="badge">🚧 This Website under development by Melvin 🚧</div></div>
+
+<div class="bracket">
+<h2>GOAT CUP BRACKET (DOUBLE ROUND)</h2>
+<h3>First Round</h3>
+<p>Match 1: Lewi vs Kenichi → <b>Winner: Lewi</b></p>
+<p>Match 2: Kenichi vs Melvin → <b>Result: Seri</b></p>
+<p>Match 3: Melvin vs Lewi → <b>Winner: Lewi</b></p>
+<h3>Final Round</h3>
+<p>Match 4: Lewi vs Kenichi → <b>Winner: Lewi</b></p>
+<p>Match 5: Kenichi vs Melvin → <b>Winner: Melvin</b></p>
+<p>Match 6: Melvin vs Lewi → <b>Winner: Melvin</b></p>
+<p><b>Info:</b> Win = 2 poin | Seri = 1 poin | Kalah = 0 poin</p>
+<table>
+<tr><th>Rank</th><th>Player</th><th>Points</th></tr>
+<tr><td>1</td><td>Lewi</td><td>6</td></tr>
+<tr><td>2</td><td>Melvin</td><td>5</td></tr>
+<tr><td>3</td><td>Kenichi</td><td>1</td></tr>
+</table>
 </div>
-<div class="card">
-<div class="concluded">🏆 GOAT CUP IS CONCLUDED 🏆</div>
-<div class="subtitle">The Winner of GOAT CUP</div>
-<div class="winner">LEWI</div>
-<div class="status">Winner still under check by FIFA Official</div>
-<div class="badge">🚧 This Website under development by Melvin 🚧</div>
-</div>
-<div class="spacer"></div>
-<footer id="f"></footer>
+<div class="spacer"></div><footer id="f"></footer>
 <script>
 setInterval(()=>f.textContent="© 2026 GOAT CUP • "+new Date().toLocaleTimeString(),1000);
-for(let i=0;i<120;i++){
-let d=document.createElement("div");
-d.className="confetti";
-d.style.left=Math.random()*100+"vw";
-d.style.background=["gold","#fff","#4fc3ff","#ff9800"][Math.floor(Math.random()*4)];
-d.style.animationDuration=(3+Math.random()*4)+"s";
-d.style.animationDelay=(Math.random()*2)+"s";
-document.body.appendChild(d);
-}
-</script>
-</body>
-</html>
+for(let i=0;i<120;i++){let d=document.createElement("div");d.className="confetti";d.style.left=Math.random()*100+"vw";d.style.background=["gold","#fff","#4fc3ff","#ff9800"][Math.floor(Math.random()*4)];d.style.animationDuration=(3+Math.random()*4)+"s";d.style.animationDelay=(Math.random()*2)+"s";document.body.appendChild(d);}
+</script></body></html>
